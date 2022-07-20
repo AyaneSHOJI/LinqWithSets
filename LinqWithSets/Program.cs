@@ -18,7 +18,11 @@ Output(cohort2.Concat(cohort3), "cohort2.Concat(cohort3)");
 // Intersect produces the set intersection of two sequences by using the default equality
 //     comparer to compare values.
 Output(cohort2.Intersect(cohort3), "cohort2.Intersect(cohort3)");
+// Set produces the set difference of two sequences by using the default equality comparer
+//     to compare values.
 Output(cohort2.Except(cohort3), "cohort2.Except(cohort3)");
+// Zip applies a specified function to the corresponding elements of two sequences,
+//     producing a sequence of the results.
 Output(cohort1.Zip(cohort2, (c1, c2) => $"{c1} matched with {c2}"), "cohort1.Zip(cohort2)");
 
 static void Output(IEnumerable<string> cohort, string descriptoin = "")
